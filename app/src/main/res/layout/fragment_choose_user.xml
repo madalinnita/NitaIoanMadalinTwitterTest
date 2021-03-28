@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.chooseuser.ChooseUserFragment"
+    android:focusable="true"
+    android:clickable="true"
+    android:focusableInTouchMode="true">
+
+   <com.google.android.material.card.MaterialCardView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintTop_toTopOf="parent"
+       app:layout_constraintBottom_toBottomOf="parent"
+       android:layout_margin="@dimen/dimen_big">
+
+       <androidx.constraintlayout.widget.ConstraintLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent">
+
+           <com.google.android.material.textview.MaterialTextView
+               android:id="@+id/enter_user_tv"
+               style="@style/BigTextStyle"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_marginStart="@dimen/dimen_medium"
+               android:layout_marginTop="@dimen/dimen_big"
+               android:layout_marginEnd="@dimen/dimen_medium"
+               android:text="@string/please_enter_user_handle"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toTopOf="parent" />
+
+           <com.google.android.material.textfield.TextInputLayout
+               android:id="@+id/textInputLayout"
+               style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:hint="@string/enter_user"
+               app:boxStrokeColor="@color/black"
+               app:hintTextColor="@color/black"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toBottomOf="@id/enter_user_tv"
+               android:layout_margin="@dimen/dimen_big"
+               app:layout_constraintVertical_bias="0.0">
+
+               <com.google.android.material.textfield.TextInputEditText
+                   android:id="@+id/textInputEditText"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:inputType="text"
+                   android:textColor="@color/black"
+                   android:textCursorDrawable="@drawable/drawable_cursor"
+                   android:focusableInTouchMode="true"
+                   android:focusable="true"/>
+
+           </com.google.android.material.textfield.TextInputLayout>
+
+           <com.google.android.material.button.MaterialButton
+               style="@style/Widget.MaterialComponents.Button.TextButton"
+               android:id="@+id/get_user_data_btn"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               app:layout_constraintTop_toBottomOf="@id/textInputLayout"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintEnd_toEndOf="parent"
+               android:text="@string/get_user_data"
+               android:textColor="@color/black"
+               app:layout_constraintBottom_toBottomOf="parent"
+               android:layout_margin="@dimen/dimen_big"/>
+
+           <androidx.constraintlayout.widget.ConstraintLayout
+               android:id="@+id/progressBar"
+               android:layout_width="match_parent"
+               android:layout_height="0dp"
+               android:background="#a2a2a2"
+               android:alpha="0.4"
+               android:visibility="gone"
+               app:layout_constraintBottom_toBottomOf="parent"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toTopOf="parent"
+               android:focusable="true"
+               android:focusableInTouchMode="true"
+               android:clickable="true">
+
+               <com.google.android.material.progressindicator.CircularProgressIndicator
+                   style="@style/Widget.MaterialComponents.CircularProgressIndicator"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:indeterminate="true"
+                   app:indicatorColor="@color/black"
+                   app:layout_constraintBottom_toBottomOf="parent"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toTopOf="parent" />
+
+           </androidx.constraintlayout.widget.ConstraintLayout>
+
+       </androidx.constraintlayout.widget.ConstraintLayout>
+   </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">NitaIoanMadalinTwitterTest</string>
+    <string name="title_activity_splash">SplashActivity</string>
+    <string name="welcome">Welcome</string>
+    <string name="to_my_assessment">to my assessment</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="please_enter_user_handle">Please enter user\'s handle</string>
+    <string name="enter_user">Enter user</string>
+    <string name="get_user_data">GET USER DATA</string>
+    <string name="error_encountered">Error encountered</string>
+    <string name="ok">OK</string>
+</resources>

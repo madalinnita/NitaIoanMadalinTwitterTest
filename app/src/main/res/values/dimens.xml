@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="dimen_medium">16dp</dimen>
+    <dimen name="small_dimen">8dp</dimen>
+    <dimen name="dimen_ultra_big">32dp</dimen>
+    <dimen name="article_image_dimen">96dp</dimen>
+    <dimen name="margin_ultra_small">2dp</dimen>
+    <dimen name="drawable_padding">12dp</dimen>
+    <dimen name="dimen_big">24dp</dimen>
+    <dimen name="toolbar_height">56dp</dimen>
+    <dimen name="toolbar_elevation">4dp</dimen>
+    <dimen name="margin_56">56dp</dimen>
+    <dimen name="profile_image_dimen">240dp</dimen>
+</resources>
