@@ -13,6 +13,7 @@ import com.example.nitaioanmadalintwittertest.data.api.ApiHelper
 import com.example.nitaioanmadalintwittertest.data.api.RetrofitBuilder
 import com.example.nitaioanmadalintwittertest.data.utils.CallStatus
 import com.example.nitaioanmadalintwittertest.utils.KeyboardUtils
+import com.example.nitaioanmadalintwittertest.utils.livedatautils.EventObserver
 import kotlinx.android.synthetic.main.fragment_choose_user.*
 
 class ChooseUserFragment : Fragment() {
@@ -48,8 +49,8 @@ class ChooseUserFragment : Fragment() {
     }
 
     private fun setupObserver() {
-        viewModel.getTwitterResponse().observe(viewLifecycleOwner, {
-            it?.let { resource ->
+        viewModel.getTwitterResponse().observe(viewLifecycleOwner, EventObserver {
+            it.let { resource ->
                 when (resource.status) {
                     CallStatus.SUCCESS -> {
                         progressBar.visibility = View.GONE
@@ -75,7 +76,8 @@ class ChooseUserFragment : Fragment() {
                     }
                 }
             }
-        })
+        }
+        )
     }
 
 

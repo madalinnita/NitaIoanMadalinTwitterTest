@@ -54,8 +54,10 @@ class TwitterUserDataFragment : Fragment() {
                 when (resource.status) {
                     CallStatus.SUCCESS -> {
                         progressBar.visibility = View.GONE
-                        resource.data?.get(0)?.let { lastTweet ->
-                            last_tweet_tv.text = lastTweet.text
+                        if(resource.data != null && resource.data.isNotEmpty()) {
+                            resource.data[0].let { lastTweet ->
+                                last_tweet_tv.text = lastTweet.text
+                            }
                         }
                     }
                     CallStatus.ERROR -> {
