@@ -13,6 +13,7 @@ import com.example.nitaioanmadalintwittertest.data.api.ApiHelper
 import com.example.nitaioanmadalintwittertest.data.api.RetrofitBuilder
 import com.example.nitaioanmadalintwittertest.data.models.userdata.TwitterUserObject
 import com.example.nitaioanmadalintwittertest.data.utils.CallStatus
+import com.example.nitaioanmadalintwittertest.ui.main.MainActivity
 import kotlinx.android.synthetic.main.fragment_twitter_user_data.*
 
 class TwitterUserDataFragment : Fragment() {
@@ -36,6 +37,8 @@ class TwitterUserDataFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        (activity as MainActivity).showBackButton()
+
         setUI()
         viewModel.getLastTweet(userData.screen_name)
         observeLastTweet()

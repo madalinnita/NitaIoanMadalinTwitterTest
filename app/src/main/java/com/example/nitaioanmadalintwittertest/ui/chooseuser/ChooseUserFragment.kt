@@ -12,6 +12,7 @@ import com.example.nitaioanmadalintwittertest.R
 import com.example.nitaioanmadalintwittertest.data.api.ApiHelper
 import com.example.nitaioanmadalintwittertest.data.api.RetrofitBuilder
 import com.example.nitaioanmadalintwittertest.data.utils.CallStatus
+import com.example.nitaioanmadalintwittertest.ui.main.MainActivity
 import com.example.nitaioanmadalintwittertest.utils.KeyboardUtils
 import com.example.nitaioanmadalintwittertest.utils.livedatautils.EventObserver
 import kotlinx.android.synthetic.main.fragment_choose_user.*
@@ -33,6 +34,7 @@ class ChooseUserFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        (activity as MainActivity).hideBackButton()
 
         setupObserver()
 

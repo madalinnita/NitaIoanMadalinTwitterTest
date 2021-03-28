@@ -9,4 +9,18 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
     }
+
+
+    fun showBackButton() {
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+    }
+
+    fun hideBackButton() {
+        supportActionBar?.setDisplayHomeAsUpEnabled(false)
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        this.onBackPressed()
+        return true
+    }
 }
